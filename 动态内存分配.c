@@ -1,11 +1,14 @@
 #include <stdio.h>  
 #include <stdlib.h>
 int main(){
-    int number,*a;
+    int number;
+    long *a;
     scanf("%d",&number);
-    a=(int*)malloc(number*sizeof(int));
-    for(int i=0;i<number;i++){
-        scanf("%d",&a[i]);
+    a=(long*)malloc(number*sizeof(long));
+    int i;
+    for( i=0;i<number;i++){
+        scanf("%ld",&a[i]);
     }
     free(a);
+    return 0;
 }
